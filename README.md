@@ -10,14 +10,14 @@ There are to main ways to use this app:
     To build and rnu the docker container, please navigate to the project directory where the ```Dockerfile```  exists, and do the following in the terminal:
     ```py
     docker buuild -t MY_IMAGE .                 # to build the docker container
-    docker container run -p 8501:8501 MY_IMAGE  # to run the docker container
+    docker container run -p 85XX:8501 MY_IMAGE  # to run the docker container, where XX are adjustable to be a valid port
     ```
     Note that the port is adjustable, but make sure to choose an unlocated one.
 
     Having done this, the app will be running on the specified port, open a browser and type the following:
     ```py
-    http://localhost:8501/          # or
-    http://127.0.0.1:8501/          # Note the port is adjustable
+    http://localhost:85XX/          # or
+    http://127.0.0.1:85XX/          # Note the port is adjustable
     ```
 
 - **Locally with Virtual Environment**
@@ -34,7 +34,7 @@ There are to main ways to use this app:
 
     Having done this, run the streamli app using the following command:
     ```py
-    streamlit run app.py --server.port=8501
+    streamlit run app.py --server.port=85XX
     ```
 
 ## Streamlit Usage
@@ -43,3 +43,5 @@ Having done the previous steps, its time to chat. Follow the following steps, pl
 1. Enter a valid OPENAI_API_KEY and press enter
 2. Upload your file
 3. In so being done, you can start chatting.
+
+![Stremalit Frontend](https://github.com/sulaiman-shamasna/chat-with-pdf/blob/main/graphs/streamlit.PNG)
