@@ -19,8 +19,6 @@ DB_CHROMA_PATH = 'vectorstore/db1'
 class PdfIngestor:
     def __init__(self, uploaded_file):
         self.uploaded_file = uploaded_file
-
-        # self.uploaded_file.name
         
     def handlefileandingest(self):
         with tempfile.NamedTemporaryFile(delete=False) as tmp_file:
@@ -82,7 +80,7 @@ class PdfIngestor:
         # User input form
         with container:
             with st.form(key='my_form', clear_on_submit=True):
-                user_input = st.text_input("Query:", placeholder="Talk to PDF data 🧮", key='input')
+                user_input = st.text_input("Query:", placeholder="Enter your question, please! 💬", key='input')
                 submit_button = st.form_submit_button(label='Send')
 
             if submit_button and user_input:
